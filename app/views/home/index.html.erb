@@ -1,0 +1,10 @@
+<h1>Bonjour Admin </h1>
+
+<div> voila les articles créer recements </div>
+    <% @posts.each do |post|%>
+        <div><%=post.title%></div>
+        <div> <%=post.title%></div>
+    <%end%>
+
+    <h2> Ajouter un article </h2>
+    <%=link_to "Articles ", posts_path %>
