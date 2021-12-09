@@ -74,6 +74,7 @@ class PostsController < ApplicationController
       :seo_keyword3,
       :seo_keyword4,
       :seo_keyword5,
-      :seo_keyword6)
+      :seo_keyword6,
+     :pic_url)
     end
 end

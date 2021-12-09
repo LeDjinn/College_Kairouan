@@ -40,6 +40,11 @@
     <%= form.label :end_time %>
     <%= form.datetime_select :end_time %>
   </div>
+   <div class="field">
+    <p>Ajoutez l'URL de la photo choisi sur Unsplah ou autre</p>
+    <%= form.label :url_de_la_photo %>
+    <%= form.text_area :pic_url %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
