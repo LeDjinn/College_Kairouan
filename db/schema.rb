@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(version: 2021_12_09_092434) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "seo_title"
-    t.string "seo_description"
+    t.text "seo_description"
     t.string "seo_keyword1"
     t.string "seo_keyword2"
     t.string "seo_keyword3"
