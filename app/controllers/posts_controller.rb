@@ -4,12 +4,18 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     @posts = Post.all
-    render json: @posts
+   
+    respond_to do |format|
+      format.html
+      format.json{
+        render :json => @posts.to_json
+      }
+    end
   end
 
   # GET /posts/1 or /posts/1.json
   def show
-    @post = Post.find(params[:id])
+
     
     render json: @post
   end
@@ -63,7 +69,7 @@ class PostsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
-      @post = Post.find(params[:id])
+      @post = Post.where(title: params[:title])
     end
 
     # Only allow a list of trusted parameters through.

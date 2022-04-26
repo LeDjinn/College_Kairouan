@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_09_092434) do
+ActiveRecord::Schema.define(version: 2021_12_09_100318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 2021_12_09_092434) do
     t.datetime "end_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "pic_url"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -80,6 +81,7 @@ ActiveRecord::Schema.define(version: 2021_12_09_092434) do
     t.string "seo_keyword4"
     t.string "seo_keyword5"
     t.string "seo_keyword6"
+    t.text "pic_url"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
