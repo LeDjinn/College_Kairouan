@@ -4,14 +4,24 @@ class EventsController < ApplicationController
   # GET /events or /events.json
   def index
     @events = Event.all
-    render json: @events
+    respond_to do |format|
+      format.html
+      format.json{
+        render :json => @events.to_json
+      }
+    end
   end
 
   # GET /events/1 or /events/1.json
   def show
     @event = Event.find(params[:id])
     
-    render json: @event
+    respond_to do |format|
+      format.html
+      format.json{
+        render :json => @event.to_json
+      }
+    end
   end
 
   # GET /events/new
