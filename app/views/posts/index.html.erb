@@ -1,15 +1,13 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Posts</h1>
+<div class="container">
+  <h1>Articles</h1>
 
 <table>
   <thead>
     <tr>
-      <th>User</th>
-      <th>Title</th>
-      <th>Sub title</th>
-      <th>Author</th>
-      <th>Body</th>
+      <th>Identifiant de l'auteur</th>
+      <th>Titre de m'article</th>
+      <th>Sous-titre</th>
+      <th>Auteru publique</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,10 +19,9 @@
         <td><%= post.title %></td>
         <td><%= post.sub_title %></td>
         <td><%= post.author %></td>
-        <td><%= post.body %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Voir les détails ', post, class: "buttonGreen"%></td>
+        <td><%= link_to 'Modifier', edit_post_path(post), class: "buttonBlue"%></td>
+        <td><%= link_to 'Supprimer', post, method: :delete, data: { confirm: "Voulez vous supprimer l'article" }, class: "buttonRed"%></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +29,6 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'Créer un article', new_post_path, class: "buttonGreen" %>
+
+</div>

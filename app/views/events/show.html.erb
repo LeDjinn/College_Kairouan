@@ -1,34 +1,36 @@
-<p id="notice"><%= notice %></p>
+<div class="container"> 
 
 <p>
-  <strong>Title:</strong>
+  <strong>Titre:</strong><br>
   <%= @event.title %>
 </p>
 
 <p>
-  <strong>Sub title:</strong>
+  <strong>Sous-titre:</strong><br>
   <%= @event.sub_title %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Description:</strong><br>
   <%= @event.description %>
 </p>
 
 <p>
-  <strong>Location:</strong>
+  <strong>Lieu:</strong><br>
   <%= @event.location %>
 </p>
 
 <p>
-  <strong>Start time:</strong>
+  <strong>Date de début:</strong><br>
   <%= @event.start_time %>
 </p>
 
 <p>
-  <strong>End time:</strong>
+  <strong>Date de fin:</strong><br>
   <%= @event.end_time %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%= link_to 'Modifier', edit_event_path(@event), class:"buttonBlue" %> |
+<%= link_to 'Retour', events_path, class:"buttonGreen" %>
+
+</div>

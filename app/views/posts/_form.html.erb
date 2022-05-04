@@ -1,7 +1,7 @@
-<%= form_with(model: post) do |form| %>
+<%= form_with(model: post,html: {class: "containerForm"}) do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <h2><%= pluralize(post.errors.count, "error") %> L'article n'a pas été crée:</h2>
 
       <ul>
         <% post.errors.each do |error| %>
@@ -16,26 +16,26 @@
   </div>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :titre %>
     <%= form.text_area :title %>
   </div>
 
   <div class="field">
-    <%= form.label :sub_title %>
+    <%= form.label :sous_titre %>
     <%= form.text_area :sub_title %>
   </div>
 
   <div class="field">
-    <%= form.label :author %>
+    <%= form.label :auteur %>
     <%= form.text_field :author %>
   </div>
 
   <div class="field">
-    <%= form.label :body %>
+    <%= form.label :contenu %>
     <%= form.rich_text_area :body %>
   </div>
   <div class='field'>
-    <%= form.label :Seo_title %>
+    <%= form.label :Seo_titre %>
     <%= form.text_field :seo_title %>
   </div>
     <div class='field'>
@@ -67,7 +67,7 @@
     <%= form.text_area :seo_keyword6 %>
   </div>
    <div class="field">
-      <p>Ajoutez l'URL de la photo choisi sur Unsplah ou autre</p>
+      <p>Ajoutez l'URL de la photo choisi sur   <a href="https://unsplash.com/" style="color: green;">Unsplash</a> et <a href="https://www.pexels.com/"style="color: green;">Pexels</a>.</p>
       <%= form.label :url_de_la_photo %>
       <%= form.text_area :pic_url %>
   </div>

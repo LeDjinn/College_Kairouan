@@ -1,6 +1,9 @@
-<h1>Editing Post</h1>
+<div class="container">
+    <h1>Créer article</h1>
 
-<%= render 'form', post: @post %>
+    <%= render 'form', post: @post %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+    <%= link_to 'Voir le détail', @post, class: "buttonGreen" %> |
+    <%= link_to 'Retour', posts_path, class: "buttonBlue" %>
+
+</div>

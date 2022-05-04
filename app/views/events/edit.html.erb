@@ -1,6 +1,8 @@
-<h1>Editing Event</h1>
+<div class="container">
+        <h1>Créer un Évènement</h1>
 
-<%= render 'form', event: @event %>
+        <%= render 'form', event: @event %>
 
-<%= link_to 'Show', @event %> |
-<%= link_to 'Back', events_path %>
+        <%= link_to 'Voir les détails ', @event, class: "buttonGreen" %> |
+        <%= link_to 'Retour', events_path, class:"buttonBlue" %>
+</div>

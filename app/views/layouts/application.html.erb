@@ -11,6 +11,12 @@
   </head>
 
   <body>
+      <nav class="navbar">
+           <%=link_to "Accueil ", root_path %>
+           <%=link_to "Articles ", posts_path %>
+           <%=link_to "Évènements", events_path%>
+
+      </nav>
     <%= yield %>
   </body>
 </html>

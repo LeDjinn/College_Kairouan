@@ -1,11 +1,66 @@
-<h1>Bonjour Admin </h1>
+<div class="container">
+  <h1 >Vous etes connecté avec le compte  :  <strong style="font-size:20px;"><%=current_user.email%> </strong> </h1>
+  
 
-<div> voila les articles créer recements </div>
-    <% @posts.each do |post|%>
-        <div><%=post.title%></div>
-        <div> <%=post.title%></div>
-    <%end%>
-
-    <h2> Ajouter un article </h2>
-    <%=link_to "Articles ", posts_path %>
-    <%=link_to "Evenements", events_path%>
+  <a href="http://www.cfkairouan.com/" target="_blanck"style="color:blue;">Aller sur le site du Collège</a>
+  <h2>Documentation</h2>
+  <div class="containerDoc">
+        <h3>Créer des articles </h3>
+        <p>
+            Pour créer des articles vous devez aller sur le lien "articles" sur la barre de navigation.
+            Vous serez sur la partie ou vous pourrez voir tout les articles, les effacer ou voir un article en particulier.<br>
+            <strong>Attention :</strong>Toutes les modifications apportées à un article seront modifiés sans possibilité de récupération et la supression de l'article est définitive.
+        </p>
+        <p>
+            Pour créer un article vous devez cliquer sur le bouton "Nouvel article" .
+            Vous serez ensuite sur la page ou vous pourrez remplir les champs nécessaires pour créer un article.
+            Vous pouvez aussi cliquer sur le bouton "Modifier" pour modifier un article existant.
+            Vous devez ajouter l'url de la photo qui doit etre de droit public, vous pouvez trouver les photos sur les sites suivants  : <a href="https://unsplash.com/" style="color: green;">Unsplash</a> et <a href="https://www.pexels.com/"style="color: green;">Pexels</a>.
+            Les attributs SEO et Keywords sont optionnels, mais peuvent être utiles pour le référencement.
+            Chaque article doit avoir un titre, un contenu, une photo et un auteur et l'admin qui l'a créé est enregistré automatiquement.
+            Pour toute aide n'hésitez pas à contacter <a href="https://www.otos-lab.fr" style ="color: violet;" target="_blanck">Notre Agence</a>
+        </p>
+  </div>
+  <div class="containerDoc">
+    <h3>Créer des Évènement </h3>
+    <p>
+        Pour créer des évènements vous devez aller sur le lien "évènements" sur la barre de navigation.
+        Vous serez sur la partie ou vous pourrez voir tout les évènements, les effacer ou voir un évènement en particulier.<br>
+        <strong>Attention :</strong>Toutes les modifications apportées à un évènement seront modifiés sans possibilité de récupération et la supression de l'évènement est définitive.
+    </p>
+    <p>
+        Pour créer un évènement vous devez cliquer sur le bouton "Nouvel évènement" .
+        Vous serez ensuite sur la page ou vous pourrez remplir les champs nécessaires pour créer un évènement.
+        Vous pouvez aussi cliquer sur le bouton "Modifier" pour modifier un évènement existant.
+        Vous devez ajouter l'url de la photo qui doit etre de droit public, vous pouvez trouver les photos sur les sites suivants  : <a href="https://unsplash.com/" style="color: green;">Unsplash</a> et <a href="https://www.pexels.com/"style="color: green;">Pexels</a>.
+        Chaque évènement doit avoir un titre, un contenu, une photo et une date début/fin et l'admin qui l'a créé est enregistré automatiquement.
+        Pour toute aide n'hésitez pas à contacter <a href="https://www.otos-lab.fr" style ="color: violet;" target="_blanck">Notre Agence</a>
+    </p>
+</div>
+<div class="containerDoc">
+    <h3>Créer des articles </h3>
+    <p>
+        Pour créer des articles vous devez aller sur le lien "articles" sur la barre de navigation.
+        Vous serez sur la partie ou vous pourrez voir tout les articles, les effacer ou voir un article en particulier.<br>
+        <strong>Attention :</strong>Toutes les modifications apportées à un article seront modifiés sans possibilité de récupération et la supression de l'article est définitive.
+    </p>
+    <p>
+        Pour créer un article vous devez cliquer sur le bouton "Nouvel article" .
+        Vous serez ensuite sur la page ou vous pourrez remplir les champs nécessaires pour créer un article.
+        Vous pouvez aussi cliquer sur le bouton "Modifier" pour modifier un article existant.
+        Vous devez ajouter l'url de la photo qui doit etre de droit public, vous pouvez trouver les photos sur les sites suivants  : <a href="https://unsplash.com/" style="color: green;">Unsplash</a> et <a href="https://www.pexels.com/"style="color: green;">Pexels</a>.
+        Les attributs SEO et Keywords sont optionnels, mais peuvent être utiles pour le référencement.
+        Chaque article doit avoir un titre, un contenu, une photo et un auteur et l'admin qui l'a créé est enregistré automatiquement.
+        Pour toute aide n'hésitez pas à contacter <a href="https://www.otos-lab.fr" style ="color: violet;" target="_blanck">Notre Agence</a>
+    </p>
+</div>
+    <div class="containerDoc">
+        <h3>Consignes générales  </h3>
+        <p>
+          Vérifiez les modifications ou les ajouts effectués sur les articles et les évènements.Les 
+          modifications seront directement disponible sur le site du college.
+          -Ne divulguez pas l'adresse de du pannel d'administration aux personnes non conecernés. 
+          -Les articles et les évènements sont directement liés au site du college.
+        </p>
+    </div>
+</div>

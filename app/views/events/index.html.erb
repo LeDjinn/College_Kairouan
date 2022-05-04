@@ -1,16 +1,15 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Events</h1>
+<div class="container">
+<h1>Les Évènements</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Sub title</th>
+      <th>Titre</th>
+      <th>Sous-titre</th>
       <th>Description</th>
-      <th>Location</th>
-      <th>Start time</th>
-      <th>End time</th>
+      <th>Llieu</th>
+      <th>Date du début</th>
+      <th>Date de fin</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,9 +23,9 @@
         <td><%= event.location %></td>
         <td><%= event.start_time %></td>
         <td><%= event.end_time %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Voir les détails', event, class:"buttonGreen" %></td>
+        <td><%= link_to 'Modifier', edit_event_path(event),class:"buttonBlue" %></td>
+        <td><%= link_to 'Supprimer', event, method: :delete, data: { confirm: "Voulez vous supprimer l'évènement" }, class:"buttonRed" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +33,6 @@
 
 <br>
 
-<%= link_to 'New Event', new_event_path %>
+<%= link_to 'Créer un évènement', new_event_path, class: "buttonGreen" %>
+
+</div>
