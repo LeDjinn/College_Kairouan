@@ -13,8 +13,13 @@
   <body>
       <nav class="navbar">
            <%=link_to "Accueil ", root_path %>
+           <%if current_user%>
            <%=link_to "Articles ", posts_path %>
            <%=link_to "Évènements", events_path%>
+             <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+           <%else%>
+             <%= link_to "Log in", new_user_session_path %>
+           <%end%>
 
       </nav>
     <%= yield %>
